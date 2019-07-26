@@ -20,20 +20,51 @@ function windowScrollEvent() {
 }
 
 function initOwlCarousel() {
-  $('.owl-carousel').owlCarousel({
+  $('.owl-carousel-projects').owlCarousel({
     nav: false,
-    // dots:false,
     margin: 20,
-    mouseDrag: false,
     responsive: {
       0: {
         items: 1
       },
-      600: {
+      768: {
+        items: 2
+      },
+      965: {
         items: 3
       },
-      1000: {
+      1200: {
         items: 4
+      }
+    }
+  })
+
+  $('.owl-carousel-clients').owlCarousel({
+    nav: false,
+    dots: false,
+    margin: 5,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 5
+      },
+      1200: {
+        items: 7
+      }
+    }
+  })
+
+  $('.owl-carousel-quotes').owlCarousel({
+    nav: false,
+    margin: 5,
+    responsive: {
+      0: {
+        items: 1
+      },
+      1200: {
+        items: 1
       }
     }
   })
