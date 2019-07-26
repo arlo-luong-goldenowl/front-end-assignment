@@ -2,14 +2,39 @@ $(document).ready(function () {
   checkAndSetNavbarBG();
   windowScrollEvent();
   initOwlCarousel();
+
+  $('.c-link').on('click', function (e) {
+    e.preventDefault();
+    let currentWidth = $(window).width();
+    //if current navbar is toggle navbar
+    if(currentWidth <= 990){
+      //toggle navbar when click
+      $( ".c-navbar-toggler" ).trigger( "click" );
+
+    }
+    var id = $(this).attr('href');
+    if (id === '#home') {
+      window.scrollTo(0, 0);
+    } else {
+      var elm = $(id);
+      window.scrollTo(0, elm.offset().top);
+    }
+    $('.c-link').removeClass('c-active');
+    $(this).addClass('c-active');
+
+
+  })
+
 })
 
 function checkAndSetNavbarBG() {
   let scrollTop = $(window).scrollTop();
   if (scrollTop > 2) {
     $('.c-navbar').addClass('black-bg')
+    // $('.navbar-nav').addClass('black-bg')
   } else {
     $('.c-navbar').removeClass('black-bg')
+    // $('.navbar-nav').removeClass('black-bg')
   }
 }
 
@@ -43,6 +68,9 @@ function initOwlCarousel() {
     nav: false,
     dots: false,
     margin: 5,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
     responsive: {
       0: {
         items: 1
