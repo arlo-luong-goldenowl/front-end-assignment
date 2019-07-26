@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
   checkAndSetNavbarBG();
   windowScrollEvent();
   initOwlCarousel();
@@ -6,35 +6,35 @@ $(document).ready(function(){
 
 function checkAndSetNavbarBG() {
   let scrollTop = $(window).scrollTop();
-  if(scrollTop > 2){
+  if (scrollTop > 2) {
     $('.c-navbar').addClass('black-bg')
-  }else{
+  } else {
     $('.c-navbar').removeClass('black-bg')
   }
 }
 
-function windowScrollEvent(){
-  $(window).scroll(function(e){
+function windowScrollEvent() {
+  $(window).scroll(function (e) {
     checkAndSetNavbarBG();
   });
 }
 
-function initOwlCarousel(){
+function initOwlCarousel() {
   $('.owl-carousel').owlCarousel({
-    nav:false,
+    nav: false,
     // dots:false,
-    margin:20,
+    margin: 20,
     mouseDrag: false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:4
-        }
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 4
+      }
     }
-})
+  })
 }
