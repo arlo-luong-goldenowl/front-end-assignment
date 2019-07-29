@@ -1,10 +1,22 @@
-html {
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
 
 /* Slider */
+.slider,
+#c-carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+
 .slider-item {
-  height: 600px;
+  height: 100%;
   width: 100%;
   background: #000000;
   display: flex;
@@ -48,8 +60,15 @@ html {
 .c-navbar-toggler {
   background: #0088cc;
 }
+
+.navbar-collapse {
+  position: relative;
+}
+
 .c-navbar {
+  margin-top: 12px;
   height: 70px;
+  transition: margin 300ms;
 }
 
 .nav-item {
@@ -74,8 +93,17 @@ html {
   height: auto;
 }
 
-.feature-box {
+.feature-box-wrapper {
   display: flex;
+  /* height:500px; */
+  position: absolute;
+}
+
+.feature-box {
+  display: block;
+  min-height: 120px;
+  /* display: flex; */
+  /* opacity: 0; */
 }
 
 .feature-content {
@@ -86,11 +114,18 @@ html {
 /* ============================================================= */
 
 /* Projects */
+.project-title-wrapper {
+  min-height: 196px;
+  max-height: 250px;
+  height: auto;
+}
+
 .projects {
   background: #ffffff;
 }
 
 .project-wrapper {
+  opacity: 0;
   position: relative;
   overflow: hidden;
 }
@@ -283,6 +318,10 @@ html {
 /* ============================================================= */
 
 /* Members - Team meet */
+.members-title-wrapper {
+  height: 92px;
+}
+
 .c-card-border-less {
   border: none;
 }
@@ -363,6 +402,17 @@ html {
 /* ============================================================= */
 
 /* Helpers */
+
+.title {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.service-title-wrapper {
+  min-height: 96px;
+}
+
 .light-bg {
   background: rgb(223, 223, 223);
 }
@@ -448,17 +498,43 @@ html {
   letter-spacing: -0.5px;
   opacity: 0.75;
 }
+
+.hiding {
+  display: none;
+}
+
+.slide-right {
+  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 /* End helpers */
 
 /* ============================================================= */
 
-/* Mobile toggle navbar */
+/* Mobile */
+@media only screen and (max-width: 745px) {
+  .project-title-wrapper {
+    height: 250px;
+  }
+}
+
 @media only screen and (max-width: 990px) {
   .mobile-navbar {
     margin-top: 20px;
     background: #212529;
     border-radius: 3px;
   }
+  /*
+  .navbar-collapse::after {
+    content: "";
+    position: absolute;
+    z-index:0;
+    width:150%;
+    height:100%;
+    left:-50%;
+    background:#212529;
+  } */
 
   .c-link:hover,
   .c-active {
@@ -470,4 +546,87 @@ html {
     margin-right: 0px;
   }
 }
-/* End Mobile Toggle Navbar */
+/* End Mobile */
+
+/* Effect class */
+.bottom-to-top {
+  opacity: 0;
+}
+
+.bottom-to-top.active {
+  animation: bottom-to-top 1s ease;
+}
+
+.right-to-left {
+  opacity: 0;
+}
+
+.right-to-left.active {
+  animation: right-to-left 1.3s ease;
+}
+
+.left-to-right {
+  opacity: 0;
+}
+
+.left-to-right.active {
+  animation: left-to-right 1.3s ease;
+}
+
+@keyframes right-to-left {
+  0% {
+    opacity: 0;
+    /* margin-left: 10px; */
+    left: 50px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+@keyframes left-to-right {
+  0% {
+    opacity: 0;
+    right: 50px;
+  }
+  100% {
+    opacity: 1;
+    right: 0px;
+  }
+}
+
+@keyframes bottom-to-top {
+  0% {
+    opacity: 0;
+    top: 50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+.test-x {
+  visibility: inherit;
+  transition: none 0s ease 0s;
+  text-align: inherit;
+  line-height: 41px;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: -1px;
+  font-weight: 900;
+  font-size: 38px;
+  white-space: nowrap;
+  min-height: 0px;
+  min-width: 0px;
+  max-height: none;
+  max-width: none;
+  filter: blur(0px);
+  opacity: 0.0001;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transform-origin: 50% 50% 0px;
+}
+
+/* End effect class */

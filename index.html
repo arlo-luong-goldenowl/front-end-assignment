@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/css//owl.theme.default.min.css">
   <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
   <title>Front-end-Assignment</title>
 </head>
 
@@ -24,8 +25,6 @@
           <i class="fa fa-align-justify pt-2"></i>
         </span>
       </button>
-
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mobile-navbar">
           <li class="nav-item text-sm-center text-center">
@@ -54,7 +53,7 @@
 
   <!-- Slider -->
   <section class="slider">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div id="c-carousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="slider-item">
@@ -71,7 +70,7 @@
                 <br>
                 in the one of largest world's MarketPlace
               </p>
-              <button class="btn text-2 font-weight-bold btn-primary c-btn text-uppercase">get start now !</button>
+              <button class="btn text-2 font-weight-bold btn-primary c-btn started-btn text-uppercase fadeInUp animated slow">get start now !</button>
             </div>
           </div>
         </div>
@@ -121,11 +120,11 @@
       </div>
     </div>
 
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#c-carousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#c-carousel" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
@@ -134,88 +133,113 @@
   <!-- End Slider -->
 
   <!-- Service -->
-  <section id="services" class="services pt-11 pb-11 ">
+  <section id="services" class="services pt-11 pb-11">
     <div class="container">
       <div class="row">
-        <div class="title text-center col-sm-12 col-xl-12 col-md-12 mb-5">
-          <h2 class="text-white font-weight-bold">Services</h2>
-          <small class="text-white ">
-            LOREM ISUM DOLOR SIT AMET, CONSECTETUR ADISCING ELIT
-          </small>
-        </div>
-        <div class="feature-box mt-4 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-          <div class="feature-icon">
-            <i class="fa fa-2x fa-empire text-white" aria-hidden="true"></i>
-          </div>
-          <div class="ml-4 feature-detail">
-            <h6 class="feature-title text-uppercase text-white font-weight-bold">Customer Support</h6>
-            <p>
-              <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.
-              </small>
-            </p>
+        <div class="service-title-wrapper col-sm-12 col-xl-12 col-md-12 has-effect bottom-to-top">
+          <div class="title text-center">
+            <h2 class="text-white font-weight-bold">Services</h2>
+            <small class="text-white ">
+              LOREM ISUM DOLOR SIT AMET, CONSECTETUR ADISCING ELIT
+            </small>
           </div>
         </div>
-        <div class="feature-box mt-4 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-          <div class="feature-icon">
-            <i class="fa fa-2x fa-sliders text-white" aria-hidden="true"></i>
-          </div>
-          <div class="ml-4 feature-detail">
-            <h6 class="feature-title text-uppercase text-white font-weight-bold">sliders</h6>
-            <p>
-              <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</small>
-            </p>
+        <div class="col-xl-12 col-md-12 col-sm-12">
+          <div class="row">
+            <div class="feature-box col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-4 has-effect right-to-left">
+              <div class="feature-box-wrapper">
+                <div class="feature-icon">
+                  <i class="fa fa-2x fa-empire text-white" aria-hidden="true"></i>
+                </div>
+                <div class="ml-4 feature-detail">
+                  <h6 class="feature-title text-uppercase text-white font-weight-bold">Customer Support</h6>
+                  <p>
+                    <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Quisque
+                      rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.
+                    </small>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-box col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-4 has-effect bottom-to-top">
+              <div class="feature-box-wrapper">
+                <div class="feature-icon">
+                  <i class="fa fa-2x fa-sliders text-white" aria-hidden="true"></i>
+                </div>
+                <div class="ml-4 feature-detail">
+                  <h6 class="feature-title text-uppercase text-white font-weight-bold">sliders</h6>
+                  <p>
+                    <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Quisque
+                      rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-box col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-4 has-effect left-to-right">
+              <div class="feature-box-wrapper">
+                <div class="feature-icon">
+                  <i class="fa fa-2x fa-align-justify text-white" aria-hidden="true"></i>
+                </div>
+                <div class="ml-4 feature-detail">
+                  <h6 class="feature-title text-uppercase text-white font-weight-bold">buttons</h6>
+                  <p>
+                    <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Quisque
+                      rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-box col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-4 has-effect right-to-left">
+              <div class="feature-box-wrapper">
+                <div class="feature-icon">
+                  <i class="fa fa-2x fa-file-o text-white" aria-hidden="true"></i>
+                </div>
+                <div class="ml-4 feature-detail">
+                  <h6 class="feature-title text-uppercase text-white font-weight-bold">HTML5 / CSS3 / JS</h6>
+                  <p>
+                    <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Quisque
+                      rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-box col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-4 has-effect bottom-to-top">
+              <div class="feature-box-wrapper">
+                <div class="feature-icon">
+                  <i class="fa fa-2x fa-user-o text-white" aria-hidden="true"></i>
+                </div>
+                <div class="ml-4 feature-detail">
+                  <h6 class="feature-title text-uppercase text-white font-weight-bold">Icons</h6>
+                  <p>
+                    <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Quisque
+                      rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-box col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-4 has-effect right-to-left">
+              <div class="feature-box-wrapper">
+                <div class="feature-icon">
+                  <i class="fa fa-2x fa-tv text-white" aria-hidden="true"></i>
+                </div>
+                <div class="ml-4 feature-detail">
+                  <h6 class="feature-title text-uppercase text-white font-weight-bold">Lightbox</h6>
+                  <p>
+                    <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Quisque
+                      rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</small>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="feature-box mt-4 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-          <div class="feature-icon">
-            <i class="fa fa-2x fa-align-justify text-white" aria-hidden="true"></i>
-          </div>
-          <div class="ml-4 feature-detail">
-            <h6 class="feature-title text-uppercase text-white font-weight-bold">buttons</h6>
-            <p>
-              <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</small>
-            </p>
-          </div>
-        </div>
-        <div class="feature-box mt-4 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-          <div class="feature-icon">
-            <i class="fa fa-2x fa-file-o text-white" aria-hidden="true"></i>
-          </div>
-          <div class="ml-4 feature-detail">
-            <h6 class="feature-title text-uppercase text-white font-weight-bold">HTML5 / CSS3 / JS</h6>
-            <p>
-              <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</small>
-            </p>
-          </div>
-        </div>
-        <div class="feature-box mt-4 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-          <div class="feature-icon">
-            <i class="fa fa-2x fa-user-o text-white" aria-hidden="true"></i>
-          </div>
-          <div class="ml-4 feature-detail">
-            <h6 class="feature-title text-uppercase text-white font-weight-bold">Icons</h6>
-            <p>
-              <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</small>
-            </p>
-          </div>
-        </div>
-        <div class="feature-box mt-4 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-          <div class="feature-icon">
-            <i class="fa fa-2x fa-tv text-white" aria-hidden="true"></i>
-          </div>
-          <div class="ml-4 feature-detail">
-            <h6 class="feature-title text-uppercase text-white font-weight-bold">Lightbox</h6>
-            <p>
-              <small class="feature-content text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</small>
-            </p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -225,18 +249,24 @@
   <section id="projects" class="projects pt-11 pb-11">
     <div class="container">
       <div class="row">
-        <div class="title text-center col-sm-12 col-xl-12 col-md-12 mb-5">
-          <h2 class="font-weight-bold mb-2">Projects</h2>
-          <small class="text-grey">
-            LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT
-          </small>
-          <p class="text-grey mt-4 mb-4 ml-5 mr-5 pl-5 pr-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat,
-            ante nulla hendrerit arcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.
-          </p>
+        <div class="project-title-wrapper col-sm-12 col-xl-12 col-md-12 mb-2 has-effect bottom-to-top">
+          <div class="title text-center">
+            <h2 class="font-weight-bold mb-2">Projects</h2>
+            <small class="text-grey">
+              LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT
+            </small>
+            <p class="text-grey mt-4 mb-4 ml-5 mr-5 pl-5 pr-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque
+              consequat,
+              ante nulla hendrerit arcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.
+            </p>
+          </div>
         </div>
+        <!-- <div class="title text-center col-sm-12 col-xl-12 col-md-12 mb-5">
+
+        </div> -->
         <div class="owl-carousel-projects owl-carousel owl-theme">
-          <div class="project-wrapper">
+          <div class="project-wrapper has-effect bottom-to-top">
             <span class="project-thumb">
               <img src="https://picsum.photos/id/912/600/600" alt="" srcset="">
             </span>
@@ -250,7 +280,7 @@
               <i class="fa fa-plus text-white" aria-hidden="true"></i>
             </span>
           </div>
-          <div class="project-wrapper">
+          <div class="project-wrapper has-effect bottom-to-top">
             <span class="project-thumb">
               <img src="https://picsum.photos/id/912/600/600" alt="" srcset="">
             </span>
@@ -264,7 +294,7 @@
               <i class="fa fa-plus text-white" aria-hidden="true"></i>
             </span>
           </div>
-          <div class="project-wrapper">
+          <div class="project-wrapper has-effect bottom-to-top">
             <span class="project-thumb">
               <img src="https://picsum.photos/id/912/600/600" alt="" srcset="">
             </span>
@@ -278,7 +308,7 @@
               <i class="fa fa-plus text-white" aria-hidden="true"></i>
             </span>
           </div>
-          <div class="project-wrapper">
+          <div class="project-wrapper has-effect bottom-to-top">
             <span class="project-thumb">
               <img src="https://picsum.photos/id/912/600/600" alt="" srcset="">
             </span>
@@ -292,7 +322,7 @@
               <i class="fa fa-plus text-white" aria-hidden="true"></i>
             </span>
           </div>
-          <div class="project-wrapper">
+          <div class="project-wrapper has-effect bottom-to-top">
             <span class="project-thumb">
               <img src="https://picsum.photos/id/912/600/600" alt="" srcset="">
             </span>
@@ -306,7 +336,7 @@
               <i class="fa fa-plus text-white" aria-hidden="true"></i>
             </span>
           </div>
-          <div class="project-wrapper">
+          <div class="project-wrapper has-effect bottom-to-top">
             <span class="project-thumb">
               <img src="https://picsum.photos/id/912/600/600" alt="" srcset="">
             </span>
@@ -320,7 +350,7 @@
               <i class="fa fa-plus text-white" aria-hidden="true"></i>
             </span>
           </div>
-          <div class="project-wrapper">
+          <div class="project-wrapper has-effect bottom-to-top">
             <span class="project-thumb">
               <img src="https://picsum.photos/id/912/600/600" alt="" srcset="">
             </span>
@@ -428,13 +458,14 @@
   <section id="members" class="members pt-10 pb-10">
     <div class="container">
       <div class="row">
-        <div class="title text-center col-sm-12 col-xl-12 col-md-12 mb-5">
+        <div class="members-title-wrapper text-center col-sm-12 col-xl-12 col-md-12 mb-2 has-effect bottom-to-top">
           <h2 class="font-weight-bold mb-2">Team</h2>
           <small class="text-grey">
             LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT
           </small>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pl-3 pr-3 mb-3">
+
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pl-3 pr-3 mb-3 has-effect bottom-to-top">
           <div class="card c-card-border-less">
             <img class="card-img-top" src="https://portotheme.com/html/porto/7.5.0/img/team/team-1.jpg"
               alt="Card image cap">
@@ -458,7 +489,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pl-3 pr-3 mb-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pl-3 pr-3 mb-3 has-effect bottom-to-top">
           <div class="card c-card-border-less">
             <img class="card-img-top" src="https://portotheme.com/html/porto/7.5.0/img/team/team-2.jpg"
               alt="Card image cap">
@@ -482,7 +513,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pl-3 pr-3 mb-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pl-3 pr-3 mb-3 has-effect bottom-to-top">
           <div class="card c-card-border-less">
             <img class="card-img-top" src="https://portotheme.com/html/porto/7.5.0/img/team/team-3.jpg"
               alt="Card image cap">
@@ -506,7 +537,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pl-3 pr-3 mb-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pl-3 pr-3 mb-3 has-effect bottom-to-top">
           <div class="card c-card-border-less">
             <img class="card-img-top" src="https://portotheme.com/html/porto/7.5.0/img/team/team-4.jpg"
               alt="Card image cap">
@@ -567,7 +598,7 @@
     <div class="container">
       <div class="row pt-8 pb-8 ">
         <div
-          class="col-sm-12 col-md-12 col-lg-4 col-xl-4 contact-elm text-lg-left text-xl-left text-md-center text-sm-center justify-content-md-center justify-content-sm-center">
+          class="col-sm-12 col-md-12 col-lg-4 col-xl-4 contact-elm text-lg-left text-xl-left text-md-center text-sm-center justify-content-md-center justify-content-sm-center has-effect right-to-left">
           <div class="contact-icon mr-3">
             <i class="fa fa-map-marker fa-2x text-white pt-1"></i>
           </div>
@@ -577,7 +608,7 @@
           </div>
         </div>
         <div
-          class="col-sm-12 col-md-12 col-lg-4 col-xl-4 contact-elm text-lg-left text-xl-left text-md-center text-sm-center justify-content-md-center justify-content-sm-center ">
+          class="col-sm-12 col-md-12 col-lg-4 col-xl-4 contact-elm text-lg-left text-xl-left text-md-center text-sm-center justify-content-md-center justify-content-sm-center has-effect right-to-left ">
           <div class="contact-icon mr-3">
             <i class="fa fa-phone fa-2x text-white pt-1"></i>
           </div>
@@ -587,7 +618,7 @@
           </div>
         </div>
         <div
-          class="col-sm-12 col-md-12 col-lg-4 col-xl-4 contact-elm text-lg-left text-xl-left text-md-center text-sm-center justify-content-md-center justify-content-sm-center ">
+          class="col-sm-12 col-md-12 col-lg-4 col-xl-4 contact-elm text-lg-left text-xl-left text-md-center text-sm-center justify-content-md-center justify-content-sm-center has-effect right-to-left ">
           <div class="contact-icon mr-3">
             <i class="fa fa-share-alt fa-2x text-white pt-1"></i>
           </div>
@@ -623,7 +654,7 @@
     <p class="text-grey text-1 pt-3"><strong>PORTO TEMPLATE</strong> - © Copyright 2019. All Rights Reserved.</p>
   </footer>
 
-  <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>

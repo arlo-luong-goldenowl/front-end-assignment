@@ -1,7 +1,12 @@
 $(document).ready(function() {
   checkAndSetNavbarBG();
+  checkSectionAndRunEffect();
   windowScrollEvent();
   initOwlCarousel();
+
+  // setTimeout(function() {
+  //   $(".started-btn").addClass("fadeInUp animated");
+  // },);
 
   $(".c-link").on("click", function(e) {
     e.preventDefault();
@@ -18,7 +23,7 @@ $(document).ready(function() {
       window.scrollTo(0, 0);
     } else {
       var elm = $(id);
-      window.scrollTo(0, elm.offset().top);
+      window.scrollTo(0, elm.offset().top - 70);
     }
     $(".c-link").removeClass("c-active");
     $(this).addClass("c-active");
@@ -28,15 +33,34 @@ $(document).ready(function() {
 function checkAndSetNavbarBG() {
   let scrollTop = $(window).scrollTop();
   if (scrollTop > 2) {
-    $(".c-navbar").addClass("black-bg");
+    $(".c-navbar")
+      .addClass("mt-0")
+      .addClass("black-bg");
   } else {
-    $(".c-navbar").removeClass("black-bg");
+    $(".c-navbar")
+      .removeClass("mt-0")
+      .removeClass("black-bg");
   }
+}
+
+function checkSectionAndRunEffect() {
+  let bottomPos = $(window).scrollTop() + $(window).height();
+  $("section").each(function(index) {
+    if(bottomPos > $(this).offset().top ){
+      let effectElms = $(this).find(".has-effect:not(.active)");
+      effectElms.each(function(eei){
+        if(bottomPos > $(this).offset().top + 100 ){
+          $(this).addClass('active').css({'opacity': 1});
+        }
+      });
+    }
+  });
 }
 
 function windowScrollEvent() {
   $(window).scroll(function(e) {
     checkAndSetNavbarBG();
+    checkSectionAndRunEffect();
   });
 }
 
